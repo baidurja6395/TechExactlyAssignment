@@ -1,16 +1,2 @@
-<div class="header" *ngIf="rowData.length">
-  <div class="content">
-    <label for="">Total no of rows:</label>
-    <p>{{rowData.length}}</p>
-  </div>
-  <div class="content">
-    <label for="">Total no selected of rows:</label>
-    <p>{{selectedRowData.length}}</p>
-  </div>
-</div>
-<div class="grid" *ngIf="apiData.length">
-  <ag-grid-angular   style="width: 500px; height: 500px;" [columnDefs]="colDefs"
-    [rowSelection]="rowSelection" [rowData]="rowData" [class]="themeClass"
-    (selectionChanged)="onSelectionChanged($event)" (gridReady)="onGridReady($event)"></ag-grid-angular>
 
-</div>
+<router-outlet></router-outlet>

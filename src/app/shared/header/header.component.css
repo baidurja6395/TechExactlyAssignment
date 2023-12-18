@@ -1,0 +1,83 @@
+.header{
+    height: 75px;
+    border-style: solid;
+    border-color: #000a0a17;
+    background-color: #019292;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    background: #0990ac;
+    box-shadow: 0px 11px 34px -5px rgba(7, 94, 109, 0.45);
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    height: 40px;
+    margin-bottom: 0;
+    padding: 5px;
+    position: relative;
+    margin: 5px;
+}
+
+.modal{
+    display: block;
+    position: absolute;
+    top: 100px;
+}
+.modal .modal-content{
+    position: relative !important;
+    display: flex !important;
+    
+}
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 27px;
+    color: #045151;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+.header1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d8080;
+}
+
+.contactUsForm{
+    display: flex;
+    justify-content: center;
+}
+
+.boxwraper{
+    height: 65px;
+    position:relative;
+  }
+
+  .inputBox {
+    width: 200px
+  }
+
+  .burttonWraper input[type="submit"] {
+    background: #0990ac;
+    box-shadow: 0px 11px 34px -5px rgba(7, 94, 109, 0.45);
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    width: 40%;
+    margin-bottom: 0;
+    padding: 1.0938rem;
+    position: relative;
+}

@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="dashboard">
+    <div class="weather" *ngIf="weatherDetails">   
+        <p>Current Humidity <b>{{weatherDetails.current.humidity}}</b>  </p>
+        <button (click)="openWeatherPopup()"><i class="bi bi-moisture"></i></button>
+    </div>
+</div>
+<app-footer></app-footer>
+<div class="modal" tabindex="-1" role="dialog" *ngIf="weatherPopup">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content ">
+        <div class="close">
+            <i class="bi bi-x-circle-fill" (click)="closeWeatherPopup()"></i>
+        </div>
+        <div class="display row">
+            <div class="col-md-6 ">
+                
+                <div class="temp ">
+                    <i class="bi bi-thermometer-snow snow" *ngIf="!tempSnoworHigh(weatherDetails.current.temp_c)"></i>
+                    <i class="bi bi-thermometer-sun sun" *ngIf="tempSnoworHigh(weatherDetails.current.temp_c)"></i>
+                    <h1><b>{{weatherDetails.current.temp_c}}</b>&deg;c</h1>
+                </div>
+                <div class="temp">
+                    <p> Feels like {{weatherDetails.current.feelslike_c}}&deg;c</p>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Humidity : <b>{{weatherDetails.current.humidity}}</b> </p>
+                <p>Visibility : <b>{{weatherDetails.current.vis_km}} KM</b> </p>
+                <p>Last updated : <b>{{weatherDetails.current.last_updated}}</b> </p>
+            </div>
+           
+        </div>
+        <div class="footer ">
+            <div class="">
+                <p>{{weatherDetails.location.region}},{{weatherDetails.location.name}},{{weatherDetails.location.country}}</p>
+            </div>
+            <div class="temp">
+                <i class="bi bi-clock mb-2 mr-1"></i>
+                <p>{{weatherDetails.location.localtime}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="dashboard">
+    <div class="row">
+        <div class="col-md-3 mt-2" *ngFor="let movie of movieList">
+            <mat-card class="example-card">
+                <mat-card-header class="titel">
+                  <mat-card-title>{{movie.original_title}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="content">
+                  <p>{{movie.overview}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <p>Vote : {{movie.vote_count}}</p>
+                  <p>Released on :{{movie.release_date}}</p>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+
+    </div>
+</div>
+<app-footer></app-footer>

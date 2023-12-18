@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="loginBody">
+    <div class="loginBox">
+        <form  *ngIf="signupForm" #loginFormRef [formGroup]="signupForm" class="form">
+            <div class="boxwraper">
+                <mat-form-field class="example-full-width" class="inputBox">
+                    <mat-label>Enter Your Email</mat-label>
+                    <input matInput placeholder="Ex. Pizza" formControlName="email">
+                </mat-form-field>
+               
+            </div>
+            <div class="boxwraper mt-2">
+                <mat-form-field class="example-full-width"  class="inputBox">
+                    <mat-label>Enter New Password</mat-label>
+                    <input [type]="showPassWord?'text':'password'" matInput placeholder="Ex. Pizza"  formControlName="password">
+                </mat-form-field>
+                <div class="eyeIcon">
+                    <i class="bi bi-eye-fill" (click)="togelPass()" *ngIf="showPassWord"></i>
+                    <i class="bi bi-eye-slash-fill" (click)="togelPass()"  *ngIf="!showPassWord"></i>
+                </div>
+            </div>
+            <div class="boxwraper mt-2">
+                <mat-form-field class="example-full-width"  class="inputBox">
+                    <mat-label>Enter Confirm Password</mat-label>
+                    <input [type]="showConfPassWord?'text':'password'" matInput placeholder="Ex. Pizza"  formControlName="confPassword">
+                </mat-form-field>
+                <div class="eyeIcon">
+                    <i class="bi bi-eye-fill" (click)="togelPass()" *ngIf="showConfPassWord"></i>
+                    <i class="bi bi-eye-slash-fill" (click)="togelPass()"  *ngIf="!showConfPassWord"></i>
+                </div>
+            </div>
+            <div class="burttonWraper">
+                <input type="submit" value="Register" (click)="Login()">
+            </div>
+            <div class="linkWraper mt-5">
+                <p>Remember account <a [routerLink]="'../'">Login</a> </p>
+            </div>
+        </form>
+        
+    </div>
+</div>
+<app-footer></app-footer>

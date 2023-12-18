@@ -1,21 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-/* Core Grid CSS */
-@import 'ag-grid-community/styles/ag-grid.css';
-/* Quartz Theme Specific CSS */
-@import 'ag-grid-community/styles/ag-theme-quartz.css';
-.example-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  #myGrid {
-    flex: 1 1 0px;
-    width: 100%;
-  }
-  
-  .example-header {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 13px;
-    margin-bottom: 5px;
-  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-form-field-infix {
+    height: 40px;
+    padding-top: 17px;
+}

@@ -1,0 +1,50 @@
+<div class="header">
+    <div class="d-flex ">
+        <img src="../../../assets/unnamed-removebg-preview.png" alt="">
+    </div>
+    <div class="d-flex">
+        <button (click)="openContactusPopup()">Contact Us</button>
+        <button (click)="dashboardClick()"  *ngIf="isLogin">Dashboard</button>
+        <button (click)="movieClick()"  *ngIf="isLogin">Movie</button>
+        <button (click)="logout()"  *ngIf="isLogin">Logout</button>
+    </div>
+
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" *ngIf="contactusPopup">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content ">
+        <div class="close">
+            <i class="bi bi-x-circle-fill" (click)="closeContactusPopup()"></i>
+        </div>
+        <div class="header1 ">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="contactUsForm">
+            <form  *ngIf="contactusForm" #loginFormRef [formGroup]="contactusForm" class="form">
+                <div class="boxwraper mt-3">
+                    <mat-form-field class="example-full-width" class="inputBox">
+                        <mat-label>Enter Your Name</mat-label>
+                        <input matInput placeholder="" formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div class="boxwraper">
+                    <mat-form-field class="example-full-width" class="inputBox">
+                        <mat-label>Enter Your Email</mat-label>
+                        <input matInput placeholder="" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="boxwraper ">
+                    <mat-form-field class="example-full-width"  class="inputBox">
+                        <mat-label>Enter Your Contact Number</mat-label>
+                        <input  matInput placeholder=""  formControlName="contactnumber">
+                    </mat-form-field>
+                </div>
+                <div class="burttonWraper">
+                    <input type="submit" value="Contact Us" (click)="submitContactUsForm()">
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
