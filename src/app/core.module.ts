@@ -5,7 +5,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormService } from './Services/form.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     AngularMaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers:[
     ApiService,

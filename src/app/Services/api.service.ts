@@ -10,11 +10,6 @@ export class ApiService {
   ) { }
 
   async post(obj:any){
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }
     return new Promise(async( resolve ,reject)=>{
       const success = (res: any) => {
         resolve(res);
@@ -30,7 +25,7 @@ export class ApiService {
       .subscribe(success, error);
     })
   }
-  async get(url:any,isBearerToken?:boolean){
+  async get(url:any){
     return new Promise(async( resolve ,reject)=>{
       const success = (res: any) => {
         resolve(res);
@@ -38,10 +33,6 @@ export class ApiService {
     const error = (err: any) => {
         reject(err);
       };
-      const headers = new HttpHeaders();
-      if(isBearerToken){
-        headers.append('Bearer','fcc54c057bbb2ec7963d38be9d190f49')
-      }
     return this.http.get<any>(url)
       .subscribe(success, error);
     })

@@ -5,6 +5,7 @@ import { LoginRoutingModule } from './login-routing.module';
 import { CoreModule } from 'src/app/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RegistrationComponent } from './registration/registration.component';
+import { ValidationMessageModule } from 'src/app/shared/validation-message/validation-message/validation-message.module';
 
 
 
@@ -14,7 +15,8 @@ import { RegistrationComponent } from './registration/registration.component';
     CommonModule,
     LoginRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    ValidationMessageModule
   ]
 })
 export class LoginModule { }

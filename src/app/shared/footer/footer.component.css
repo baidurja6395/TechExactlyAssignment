@@ -7,4 +7,11 @@
     color: #f9f9f9;
     align-items: center;
     justify-content: flex-end;
+   
+}
+
+.f-body{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }

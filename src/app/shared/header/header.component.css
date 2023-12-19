@@ -64,6 +64,10 @@ button {
   .inputBox {
     width: 200px
   }
+  .burttonWraper{
+    display: flex;
+    justify-content: center;
+  }
 
   .burttonWraper input[type="submit"] {
     background: #0990ac;
@@ -76,7 +80,6 @@ button {
     font-size: 1rem;
     letter-spacing: 0.5px;
     color: #FFFFFF;
-    width: 40%;
     margin-bottom: 0;
     padding: 1.0938rem;
     position: relative;

@@ -74,3 +74,12 @@
     .linkWraper span {
         color: rgb(0, 21, 255);
     }
+
+    .rememberme {
+      display: flex;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: baseline;
+  }
+
+   

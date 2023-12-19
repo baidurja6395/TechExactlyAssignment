@@ -13,22 +13,19 @@ export class HeaderComponent implements OnInit{
   contactusPopup:boolean = false;
   contactusForm:FormGroup|undefined;
   isLogin:boolean=false;
+  errorMsg:any={}
   constructor(
     private router:Router,
     private fb:FormBuilder,
     private formService:FormService,
   ){
     this.createFormGroup()
+    this.createMsg()
     if(localStorage.getItem(APIKEY)){
       this.isLogin = true
     }
   }
   ngOnInit(): void {
-    this.contactusForm?.get('contactnumber')?.valueChanges.subscribe(res=>{
-      if(res && res.length){
-
-      }
-    })
   }
 
   dashboardClick(){
@@ -63,6 +60,23 @@ export class HeaderComponent implements OnInit{
       email:['',[Validators.required,Validators.email]],
       contactnumber:['',[Validators.required, Validators.minLength(10),Validators.maxLength(10)]],
     })
+  }
+
+  createMsg() {
+    this.errorMsg = {
+      email: {
+        required: 'Email is required',
+        email: 'Email in not Valid'
+      },
+      name: {
+        required: 'Name is required'
+      },
+      contactnumber:{
+        required: 'Contact number is required',
+        minLength:'Enter valid contact number',
+        maxLength:'Enter valid contact number',
+      }
+    }
   }
 
 }
